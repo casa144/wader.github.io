@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <title>Wader - Your way through water</title>
     <style>
-      nav {
+       nav {
         background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
         padding: 1rem 0;
         position: sticky;
@@ -20,14 +20,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
       }
       
       nav ul {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         margin: 0;
         padding: 0;
         list-style: none;
+        flex-wrap: wrap;
       }
       
       nav a {
@@ -35,6 +38,7 @@
         text-decoration: none;
         font-weight: 500;
         transition: opacity 0.3s;
+        font-size: 0.95rem;
       }
       
       nav a:hover {
@@ -43,7 +47,22 @@
       
       nav strong {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          gap: 0.5rem;
+        }
+        
+        nav a {
+          font-size: 0.85rem;
+          padding: 0.25rem 0.5rem;
+        }
+        
+        nav strong {
+          font-size: 1.2rem;
+        }
       }
 
       .hero {
@@ -149,14 +168,6 @@
         justify-content: center;
         font-size: 3rem;
         color: white;
-      }
-
-      footer {
-        background: #002233;
-        color: white;
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 4rem;
       }
     </style>
   </head>
@@ -273,7 +284,5 @@
         </div>
       </section>
     </main>
-
-
   </body>
 </html>
